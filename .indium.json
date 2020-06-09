@@ -1,8 +1,9 @@
 {
   "configurations": [
     {
-      "name": "JavaScript Foundations",
-      "type": "chrome"
+        "name": "JavaScript Foundations",
+        "type": "node",
+        "program": "node"
     }
   ]
 }
