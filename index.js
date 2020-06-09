@@ -67,8 +67,8 @@ const monthlyRate = principle * (
  * your monthly rate is 1073.64"
  */
 
-function mortgageCalculator() {
     console.log (`${name}, your monthly rate is ${monthlyrate}`);
+function mortgageCalculatorName() {
 }
 
 // 🏡 Task 4: Arguments and Parameters
@@ -103,7 +103,7 @@ function mortgageCalculator(principle, interestRate, years) {
  * you'd do monthlyRate * 1.05.
  */
 
-function mortgageCalculator(principle,
+function mortgageCalculatorCredit(principle,
                             interestRate,
                             years,
                             creditScore) {
