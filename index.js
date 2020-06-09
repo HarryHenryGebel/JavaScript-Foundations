@@ -67,8 +67,8 @@ const monthlyRate = principle * (
  * your monthly rate is 1073.64"
  */
 
-    console.log (`${name}, your monthly rate is ${monthlyrate}`);
 function mortgageCalculatorName() {
+    console.log (`${name}, your monthly rate is ${monthlyRate.toFixed(2)}`);
 }
 
 // 🏡 Task 4: Arguments and Parameters
@@ -110,12 +110,11 @@ function mortgageCalculatorCredit(principle,
     const baseMonthlyRate = mortgageCalculator(principle,
                                                interestRate,
                                                years);
+    let adjustment = 1.0
     if (creditScore > 740) {
-        const adjustment = 1.05;
+        adjustment = 1.05;
     } else if (creditScore < 660) {
-        const adjustment = 0.95;
-    } else {
-        const adjustment = 1;
+        adjustment = 0.95;
     }
 
     return baseMonthlyRate * adjustment;
@@ -144,13 +143,14 @@ function mortgageCalculatorCredit(principle,
 function variableInterestRate (principle, interestRate, years) {
     for (sampleInterestRate = interestRate - 0.02;
          sampleInterestRate <= interestRate + 0.02;
-         sampleInterestRate + 0.005) {
-        const sampleRate = mortgageCalculator(principle,
+         sampleInterestRate += 0.005) {
+        let sampleRate = mortgageCalculator(principle,
                                               interestRate,
                                               years);
+        sampleRate = mortgageCalculator(principle, sampleInterestRate, years)
         console.log(`${name}, with an interest rate of ` +
-                    `${sampleInterestRate}, your monthly rate is ` +
-                    `${sampleRate}`)};
+                    `${sampleInterestRate.toFixed(3)}, your monthly rate is ` +
+                    `${sampleRate.toFixed(2)}`)};
 }
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
