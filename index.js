@@ -35,21 +35,22 @@ years*12.
  * helpful to create seperate variables to hold parts of your
  * equation. That might look like this:
 
- * (1) Create a variable called n1 and set it equal to  (1 + I )^N
+ (1) Create a variable called n1 and set it equal to  (1 + I )^N
 
- * (2) Create a variable called n2 and set it equal to n1 * I
+ (2) Create a variable called n2 and set it equal to n1 * I
 
- * (3) Create a variable called numerator and set it equal to n1 * n2 
+ (3) Create a variable called numerator and set it equal to n1 * n2 
 
- * (4) Create a variable called denominator and set it equal to n1 - 1 
+ (4) Create a variable called denominator and set it equal to n1 - 1 
 
- * (5) Create a variable called monthlyRate and set it equal to
- * numerator/denominator
+ (5) Create a variable called monthlyRate and set it equal to
+ numerator/denominator
 
 
-Hint #2: you'll need to use the `math` object for parts of this calculation!
+ * Hint #2: you'll need to use the `math` object for parts of this
+ * calculation!
 
-When your math is correct, monthlyRate will equal 1073.64
+ * When your math is correct, monthlyRate will equal 1073.64
 */
 
 
