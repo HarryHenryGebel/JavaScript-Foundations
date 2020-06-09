@@ -106,8 +106,23 @@ function mortgageCalculator(principle, interestRate, years) {
  * you'd do monthlyRate * 1.05.
 */
 
+function mortgageCalculator(principle,
+                            interestRate,
+                            years,
+                            creditScore) {
+    const baseMonthlyRate = mortgageCalculator(principle,
+                                               interestRate,
+                                               years);
+    if (creditScore > 740) {
+        const adjustment = 1.05;
+    } else if (creditScore < 660) {
+        const adjustment = 0.95;
+    } else {
+        const adjustment = 1;
+    }
 
-
+    return baseMonthlyRate * adjustment;
+}
 
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function
