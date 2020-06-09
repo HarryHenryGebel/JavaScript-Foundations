@@ -110,7 +110,7 @@ function mortgageCalculatorCredit(principle,
     const baseMonthlyRate = mortgageCalculator(principle,
                                                interestRate,
                                                years);
-    let adjustment = 1.0
+    let adjustment = 1.0;
     if (creditScore > 740) {
         adjustment = 1.05;
     } else if (creditScore < 660) {
