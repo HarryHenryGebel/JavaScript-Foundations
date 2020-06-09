@@ -80,7 +80,15 @@ function mortgageCalculator() {
  * mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
+function mortgageCalculator(principle, interestRate, years) {
+    const monthlyInterestRate = interestRate / 12.0;
+    const periods = years * 12;
+    const compoundedInterest = Math.pow(1 + monthlyInterestRate, periods)
 
+    return principle * (
+        (monthlyInterestRate * compoundedInterest) /
+            (compoundedInterest - 1));
+}
 
 
 
