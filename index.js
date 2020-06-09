@@ -9,7 +9,7 @@
 let principle = 200000;
 let interestRate = 0.05;
 let years = 30;
-let name = "Harry Henry Gebel"
+let name = "Harry Henry Gebel";
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the
@@ -54,10 +54,10 @@ let periods = years * 12;
  * When your math is correct, monthlyRate will equal 1073.64
 */
 
-let compoundedInterest = Math.pow(1 + monthlyInterestRate, periods)
+let compoundedInterest = Math.pow(1 + monthlyInterestRate, periods);
 let monthlyRate = principle * (
     (monthlyInterestRate * compoundedInterest) /
-        (compoundedInterest - 1))
+        (compoundedInterest - 1));
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of
