@@ -6,9 +6,9 @@
  * value called name and give it the value of your own name.
 */
 
-const principle = 200000;
-const interestRate = 0.05;
-const years = 30;
+let principle = 200000;
+let interestRate = 0.05;
+let years = 30;
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the
@@ -21,8 +21,8 @@ value of interest rate divided by 12.
 years*12.
 */
 
-const monthlyInterestRate = interestRate / 12.0;
-periods = years * 12;
+let monthlyInterestRate = interestRate / 12.0;
+let periods = years * 12;
 
 
 // 🏡 Task 2: Harder Math
