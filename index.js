@@ -1,4 +1,3 @@
-
 // 🌟🌟🌟 M V P 🌟🌟🌟//
 
 // 🏡 Task 1: Variables
@@ -7,10 +6,10 @@
  * value called name and give it the value of your own name.
  */
 
-let principle = 200000;
-let interestRate = 0.05;
-let years = 30;
-let name = "Harry Henry Gebel";
+const principle = 200000;
+const interestRate = 0.05;
+const years = 30;
+const name = "Harry Henry Gebel";
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the
@@ -23,8 +22,8 @@ let name = "Harry Henry Gebel";
  years*12.
 */
 
-let monthlyInterestRate = interestRate / 12.0;
-let periods = years * 12;
+const monthlyInterestRate = interestRate / 12.0;
+const periods = years * 12;
 
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe (also below)
@@ -54,8 +53,8 @@ let periods = years * 12;
  * When your math is correct, monthlyRate will equal 1073.64
  */
 
-let compoundedInterest = Math.pow(1 + monthlyInterestRate, periods);
-let monthlyRate = principle * (
+const compoundedInterest = Math.pow(1 + monthlyInterestRate, periods);
+const monthlyRate = principle * (
     (monthlyInterestRate * compoundedInterest) /
         (compoundedInterest - 1));
 
