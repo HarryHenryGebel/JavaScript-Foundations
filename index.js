@@ -68,9 +68,9 @@ let monthlyRate = principle * (
  * your monthly rate is 1073.64"
 */
 
-
-
-
+function mortgageCalculator() {
+    console.log (`${name}, your monthly rate is ${monthlyrate}`);
+}
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that
