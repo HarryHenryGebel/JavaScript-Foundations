@@ -47,15 +47,16 @@ let periods = years * 12;
  (5) Create a variable called monthlyRate and set it equal to
  numerator/denominator
 
-
  * Hint #2: you'll need to use the `math` object for parts of this
  * calculation!
 
  * When your math is correct, monthlyRate will equal 1073.64
 */
 
-
-
+let compoundedInterest = Math.pow(1 + monthlyInterestRate, periods)
+let monthlyRate = principle * (
+    (monthlyInterestRate * compoundedInterest) /
+        (compoundedInterest - 1))
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of
