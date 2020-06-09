@@ -144,8 +144,17 @@ function mortgageCalculator(principle,
  * "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-
-
+function variableInterestRate (principle, interestRate, years) {
+    for (sampleInterestRate = interestRate - 0.02;
+         sampleInterestRate <= interestRate + 0.02;
+         sampleInterestRate + 0.005) {
+        const sampleRate = mortgageCalculator(principle,
+                                              interestRate,
+                                              years);
+        console.log(`${name}, with an interest rate of ` +
+                    `${sampleInterestRate}, your monthly rate is ` +
+                    `${sampleRate}`)};
+}
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
