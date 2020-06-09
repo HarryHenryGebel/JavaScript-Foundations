@@ -1,10 +1,11 @@
+
 // 🌟🌟🌟 M V P 🌟🌟🌟//
 
 // 🏡 Task 1: Variables
 /* Create variables for principal, interest rate, and years. Assign
  * them the values 200000, 0.05, and 30 respectively. Create another
  * value called name and give it the value of your own name.
-*/
+ */
 
 let principle = 200000;
 let interestRate = 0.05;
@@ -15,16 +16,15 @@ let name = "Harry Henry Gebel";
 /* To create a monthly mortgage rate calculator, we need to know the
  * number of years in months and the monthly interest rate.
 
-(1) Create a variable called `monthlyInterestRate` and give it the
-value of interest rate divided by 12.  
+ (1) Create a variable called `monthlyInterestRate` and give it the
+ value of interest rate divided by 12.
 
-(2) Create another variable called `periods` and give it the value of
-years*12.
+ (2) Create another variable called `periods` and give it the value of
+ years*12.
 */
 
 let monthlyInterestRate = interestRate / 12.0;
 let periods = years * 12;
-
 
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe (also below)
@@ -41,9 +41,9 @@ let periods = years * 12;
 
  (2) Create a variable called n2 and set it equal to n1 * I
 
- (3) Create a variable called numerator and set it equal to n1 * n2 
+ (3) Create a variable called numerator and set it equal to n1 * n2
 
- (4) Create a variable called denominator and set it equal to n1 - 1 
+ (4) Create a variable called denominator and set it equal to n1 - 1
 
  (5) Create a variable called monthlyRate and set it equal to
  numerator/denominator
@@ -52,7 +52,7 @@ let periods = years * 12;
  * calculation!
 
  * When your math is correct, monthlyRate will equal 1073.64
-*/
+ */
 
 let compoundedInterest = Math.pow(1 + monthlyInterestRate, periods);
 let monthlyRate = principle * (
@@ -66,7 +66,7 @@ let monthlyRate = principle * (
 
  * If your name is `Oscar` mortgageCalculator() should return "Oscar,
  * your monthly rate is 1073.64"
-*/
+ */
 
 function mortgageCalculator() {
     console.log (`${name}, your monthly rate is ${monthlyrate}`);
@@ -78,7 +78,7 @@ function mortgageCalculator() {
 
  * For example,
  * mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
-*/
+ */
 
 function mortgageCalculator(principle, interestRate, years) {
     const monthlyInterestRate = interestRate / 12.0;
@@ -89,8 +89,6 @@ function mortgageCalculator(principle, interestRate, years) {
         (monthlyInterestRate * compoundedInterest) /
             (compoundedInterest - 1));
 }
-
-
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This
@@ -104,7 +102,7 @@ function mortgageCalculator(principle, interestRate, years) {
  * Hint: To drop an interest rate by 5% you can take monthlyRate and
  * multiply it by 0.95. Similarly, to increase an interest rate by 5%
  * you'd do monthlyRate * 1.05.
-*/
+ */
 
 function mortgageCalculator(principle,
                             interestRate,
@@ -142,7 +140,7 @@ function mortgageCalculator(principle,
  * "{Name}, with an interest rate of 0.05, your monthly rate is $1074"
  * "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
  * "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
-*/
+ */
 
 function variableInterestRate (principle, interestRate, years) {
     for (sampleInterestRate = interestRate - 0.02;
