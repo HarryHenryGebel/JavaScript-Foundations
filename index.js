@@ -144,10 +144,7 @@ function variableInterestRate (principle, interestRate, years) {
     for (sampleInterestRate = interestRate - 0.02;
          sampleInterestRate <= interestRate + 0.02;
          sampleInterestRate += 0.005) {
-        let sampleRate = mortgageCalculator(principle,
-                                              interestRate,
-                                              years);
-        sampleRate = mortgageCalculator(principle, sampleInterestRate, years)
+        let sampleRate = mortgageCalculator(principle, sampleInterestRate, years);
         console.log(`${name}, with an interest rate of ` +
                     `${sampleInterestRate.toFixed(3)}, your monthly rate is ` +
                     `${sampleRate.toFixed(2)}`)};
@@ -167,6 +164,10 @@ function variableInterestRate (principle, interestRate, years) {
 /* 🏡 Build a calculator function that accepts `monthly payment` and
  * `interest rate` and returns the maximum loan that a person could
  * afford */
+
+function affordabilityCalculator (monthlyPayment, interestRate) {
+    
+}
 
 
 /* 🏡 Explore using `window.prompt()` to allow a user to input
