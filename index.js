@@ -167,8 +167,32 @@ function variableInterestRate (principle, interestRate, years) {
  * `interest rate` and returns the maximum loan that a person could
  * afford */
 
-function affordabilityCalculator (monthlyPayment, interestRate) {
-    
+/* Solve for P
+
+        I(1 + I)^N
+ M = P -------------
+       (1 + I)^N - 1
+
+M     I(1 + I)^N
+- = -------------
+P   (1 + I)^N - 1
+
+P   (1 + I)^N - 1
+- = -------------
+M    I(1 + I)^N
+
+    M((1 + I)^N - 1)
+P = ----------------
+      I(1 + I)^N
+
+*/
+
+function affordabilityCalculator (monthlyPayment, interestRate, years) {
+    const periods = years * 12;
+    const compoundedInterest = Math.pow(1 + monthlyInterestRate, periods);
+
+    return ((monthlyPayment * (compoundedInterest - 1)) /
+            interest * compoundedInterest);
 }
 
 
