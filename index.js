@@ -144,7 +144,9 @@ function variableInterestRate (principle, interestRate, years) {
     for (sampleInterestRate = interestRate - 0.02;
          sampleInterestRate <= interestRate + 0.02;
          sampleInterestRate += 0.005) {
-        let sampleRate = mortgageCalculator(principle, sampleInterestRate, years);
+        let sampleRate = mortgageCalculator(principle,
+                                            sampleInterestRate,
+                                            years);
         console.log(`${name}, with an interest rate of ` +
                     `${sampleInterestRate.toFixed(3)}, your monthly rate is ` +
                     `${sampleRate.toFixed(2)}`)};
