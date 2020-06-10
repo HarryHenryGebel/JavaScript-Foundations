@@ -189,10 +189,11 @@ P = ----------------
 
 function affordabilityCalculator (monthlyPayment, interestRate, years) {
     const periods = years * 12;
+    const monthlyInterestRate = interestRate / 12;
     const compoundedInterest = Math.pow(1 + monthlyInterestRate, periods);
 
     return ((monthlyPayment * (compoundedInterest - 1)) /
-            interest * compoundedInterest);
+            (monthlyInterestRate * compoundedInterest));
 }
 
 
